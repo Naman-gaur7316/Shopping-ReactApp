@@ -1,0 +1,40 @@
+.header {
+    width: 100%;
+    background-color: black;
+    padding: 1.5rem 1rem;
+    
+    &__nav {
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        
+
+
+        &-list {
+            display: flex;
+
+            li {
+                list-style: none;
+                &:not(:last-child) {
+                    margin-right: 1.5rem;
+                }
+            }
+
+            a,
+            a:visited,
+            a:active {
+                text-decoration: none;
+                display: inline-block;
+                padding: 1rem 1.7rem;
+                border-radius: 5px;
+                color: white;
+                transition: all 0.3s ease;
+            }
+
+            a:hover {
+                color: white;
+                background-color: #9530D9;
+            }
+        }
+    }
+}

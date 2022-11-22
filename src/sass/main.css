@@ -1,0 +1,208 @@
+@charset "UTF-8";
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+}
+
+.active {
+  color: white;
+  background-color: #9530D9;
+}
+
+.empty-fav {
+  text-align: center;
+  line-height: 4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.empty-fav img {
+  max-width: 10rem;
+  height: auto;
+}
+.empty-fav p {
+  font-size: 1.2rem;
+  word-spacing: 0.2rem;
+}
+
+.header {
+  width: 100%;
+  background-color: black;
+  padding: 1.5rem 1rem;
+}
+.header__nav {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.header__nav-list {
+  display: flex;
+}
+.header__nav-list li {
+  list-style: none;
+}
+.header__nav-list li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+.header__nav-list a,
+.header__nav-list a:visited,
+.header__nav-list a:active {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 1.7rem;
+  border-radius: 5px;
+  color: white;
+  transition: all 0.3s ease;
+}
+.header__nav-list a:hover {
+  color: white;
+  background-color: #9530D9;
+}
+
+.loader {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 0.7rem solid rgb(209, 200, 200);
+  border-top: 0.7rem solid skyblue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (min-width: 48rem) {
+  .productgrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem 1rem;
+  }
+}
+
+.productcard {
+  width: 80%;
+  margin: 2rem auto;
+  background-color: white;
+  box-shadow: 0 0.625rem 0.6rem rgba(0, 0, 0, 0.096);
+  border-radius: 5px;
+  padding: 0.8rem;
+  transition: all 0.3s ease;
+}
+@media (min-width: 48rem) {
+  .productcard {
+    flex: 0 0 48%;
+  }
+}
+@media (min-width: 64rem) {
+  .productcard {
+    flex: 0 0 22%;
+  }
+}
+.productcard:hover {
+  box-shadow: 0 0.625rem 0.6rem rgba(0, 0, 0, 0.212);
+}
+.productcard__inner {
+  width: 100%;
+}
+.productcard__inner .img-box {
+  text-align: center;
+}
+.productcard__inner .img-box img {
+  width: 8rem;
+  height: 12rem;
+}
+.productcard__info {
+  text-align: center;
+  padding: 0.7rem 0;
+}
+.productcard__info p {
+  font-weight: 600;
+}
+.productcard__info .rating {
+  padding: 0.2rem;
+  line-height: 2;
+}
+.productcard__btn {
+  padding: 0.4rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.productcard__btn button {
+  border: none;
+  background-color: transparent;
+  padding: 0 0.3rem;
+}
+.productcard__btn .btn {
+  border-radius: 5px;
+  background-color: #9530d9;
+  color: white;
+  padding: 0.3rem 0.6rem;
+}
+.productcard .heart {
+  width: 24px; /* pathのサイズ */
+  height: 24px; /* pathのサイズ */
+  background: #ff5252; /* 色 */
+  clip-path: path("M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181");
+}
+.productcard .heart-1 {
+  width: 24px; /* pathのサイズ */
+  height: 24px; /* pathのサイズ */
+  background: #FF5252; /* 色 */
+  clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
+}
+
+.cartgrid {
+  display: flex;
+  flex-direction: column;
+}
+
+.cartitem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid rgb(46, 42, 42);
+}
+.cartitem__inner {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 0 1rem;
+}
+.cartitem .img-box img {
+  width: 8rem;
+  height: 12rem;
+}
+.cartitem__quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+.cartitem__quantity button {
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+  background-color: #9530D9;
+}/*# sourceMappingURL=main.css.map */

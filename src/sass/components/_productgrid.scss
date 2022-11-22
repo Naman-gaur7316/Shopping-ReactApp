@@ -1,0 +1,11 @@
+.productgrid {
+
+    @include breakpoint-up(medium) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4rem 1rem;
+
+    }
+    
+}
